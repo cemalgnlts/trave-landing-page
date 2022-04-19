@@ -1,0 +1,252 @@
+@import "./head.css";
+
+header {
+  margin-top: 1em;
+}
+
+body {
+  background: url(../img/illustration.png) no-repeat;
+  background-position: right bottom;
+  background-size: auto 100%;
+}
+
+.container {
+  padding: 2em;
+}
+
+.logo {
+  --size: 3rem;
+  font-size: 1.7rem;
+  display: inline-block;
+  background: var(--primary-color);
+  width: var(--size);
+  height: var(--size);
+  text-align: center;
+  line-height: var(--size);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px 4px rgba(0, 0, 0, 0.1);
+  left: 0 !important;
+}
+
+.title {
+  margin-top: 0.8rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--primary-color);
+  font-size: 3rem;
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+
+.title > span,
+.text > span {
+  display: inline-block;
+}
+
+.text {
+  font-size: 1.2rem;
+  margin: 1em 0 2em;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-family: sans-serif;
+  position: relative;
+  white-space: pre-line;
+}
+
+.dots {
+  position: absolute;
+  left: 8em;
+  bottom: 27px; /* A char height / 2 */
+  height: 100%;
+  display: block;
+  user-select: none;
+  display: flex;
+  align-items: flex-end;
+}
+
+.dot {
+  --size: 5px;
+  cursor: pointer;
+  display: inline-block;
+  width: var(--size);
+  height: auto;
+  padding-top: var(--size);
+  margin-right: 0.3rem;
+  border-radius: 50%;
+  background: var(--primary-color);
+  opacity: 0.5;
+}
+
+.dot.active {
+  background: var(--primary-color);
+  opacity: 1;
+}
+
+.btn {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0px 2px 6px 4px rgba(0, 0, 0, 0.1);
+  transition-property: padding, box-shadow;
+  transition: 200ms ease-out;
+}
+
+.btn:hover {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.btn:active {
+  box-shadow: 0px 2px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+.char-with-tail {
+  --size: 2.5em;
+  margin-top: 5em;
+  padding-top: 3.5em;
+  top: 1em;
+  position: relative;
+}
+
+.char-with-tail::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(var(--size) * -1);
+  height: 100%;
+  width: 2px;
+  background: var(--primary-color);
+  transform: translateX(calc(var(--size) / 2 + 0.5em));
+  z-index: -1;
+}
+
+.char-with-tail__char {
+  color: #fff;
+  font-family: Arial;
+  font-size: 1.4rem;
+  font-weight: 500;
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+  line-height: var(--size);
+  text-align: center;
+  border-radius: var(--size);
+  background: var(--primary-color);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-position: 30%;
+  }
+
+  header {
+    margin-top: 0;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  .text {
+    font-size: 1rem;
+    white-space: normal;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+
+  .char-with-tail {
+    padding-top: 2em;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  body {
+    background-position: 35%;
+  }
+
+  .text {
+    white-space: pre-line;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-position: center;
+  }
+  .container {
+    padding-left: 5em;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    background-position: right;
+  }
+  .container {
+    padding-left: 6em;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  html {
+    font-size: 30px;
+  }
+
+  header > .container {
+    padding-left: 5em;
+  }
+
+  main > .container {
+    padding: 5em;
+  }
+
+  .char-with-tail {
+    padding-top: 6rem;
+  }
+
+  .dot {
+    --size: 12px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-height: 960px) {
+  .container {
+    padding-left: 4em;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .text {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    padding: 1.1em 3em;
+  }
+
+  .btn:hover {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .char-with-tail {
+    padding-top: 5em;
+  }
+  
+  .dot {
+    --size: 6px;
+  }
+}
