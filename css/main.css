@@ -172,15 +172,16 @@ body {
 }
 
 @media screen and (min-width: 520px) {
+  body {
+    background-position: right bottom;
+  }
+
   .text {
     white-space: pre-line;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body {
-    background-position: right bottom;
-  }
   .container {
     padding-left: 5em;
   }
