@@ -8,6 +8,7 @@ body {
   background: url(../img/illustration.png) no-repeat;
   background-position: right bottom;
   background-size: auto 100%;
+  background-attachment: fixed;
 }
 
 .container {
@@ -141,7 +142,7 @@ body {
   background: var(--primary-color);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   body {
     background-position: 30% bottom;
   }
@@ -171,10 +172,6 @@ body {
 }
 
 @media screen and (min-width: 520px) {
-  body {
-    background-position: 35% bottom;
-  }
-
   .text {
     white-space: pre-line;
   }
@@ -182,7 +179,7 @@ body {
 
 @media screen and (min-width: 1024px) {
   body {
-    background-position: center bottom;
+    background-position: right bottom;
   }
   .container {
     padding-left: 5em;
@@ -191,7 +188,7 @@ body {
 
 @media screen and (min-width: 1400px) {
   body {
-    background-position: left bottom;
+    /* background-position: left bottom; */
   }
   .container {
     padding-left: 6em;
