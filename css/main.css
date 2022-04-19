@@ -143,7 +143,7 @@ body {
 
 @media screen and (max-width: 768px) {
   body {
-    background-position: 30%;
+    background-position: 30% bottom;
   }
 
   header {
@@ -172,7 +172,7 @@ body {
 
 @media screen and (min-width: 520px) {
   body {
-    background-position: 35%;
+    background-position: 35% bottom;
   }
 
   .text {
@@ -182,7 +182,7 @@ body {
 
 @media screen and (min-width: 1024px) {
   body {
-    background-position: center;
+    background-position: center bottom;
   }
   .container {
     padding-left: 5em;
@@ -191,7 +191,7 @@ body {
 
 @media screen and (min-width: 1400px) {
   body {
-    background-position: right;
+    background-position: left bottom;
   }
   .container {
     padding-left: 6em;
